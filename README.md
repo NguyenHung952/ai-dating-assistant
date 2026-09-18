@@ -23,7 +23,7 @@ FACT ≠ SIGNAL ≠ INTERPRETATION ≠ INFERENCE ≠ DECISION
 
 ## 🧠 Hệ thống hiện tại
 
-Phiên bản Gemini hiện tại sử dụng **MASTER_CORE v2.5** với tầng reasoning/decision trước khi chọn chiến lược phản hồi.
+Phiên bản Gemini hiện tại sử dụng **MASTER_CORE v2.6_GENZ_EQ**, kế thừa reasoning/decision architecture của v2.5 và bổ sung lớp response surface cho natural Gen-Z Vietnamese, teencode calibration và high-EQ emotional calibration.
 
 ```text
 INPUT
@@ -164,7 +164,8 @@ Sinh viên Điện tử Viễn thông – IUH
 ## 📌 Project Status
 
 - **Current system:** Gemini Conversation Copilot
-- **Reasoning core:** `MASTER_CORE v2.5`
+- **Reasoning / decision core:** `MASTER_CORE v2.6_GENZ_EQ`
+- **Base architecture:** `MASTER_CORE v2.5`
 - **Knowledge Base:** 10 PDF
-- **Prompt history:** `ver1.0` → `ver6.0`
+- **Prompt history:** `ver1.0` → `ver7.0`
 - **Primary language:** Vietnamese
