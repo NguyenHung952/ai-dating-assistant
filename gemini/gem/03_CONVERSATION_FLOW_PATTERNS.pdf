@@ -1,0 +1,76 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Length 1370 >>
+stream
+BT
+/F1 11 Tf
+50 790 Td
+(CONVERSATION FLOW PATTERNS) Tj
+0 -15 Td
+() Tj
+0 -15 Td
+(STORY HANDLING Pick one interesting detail from a story. React or develop it. Optional one) Tj
+0 -15 Td
+(light question. Do not answer every branch and do not turn a story into an interview.) Tj
+0 -15 Td
+() Tj
+0 -15 Td
+(TOPIC TRANSITION CURRENT TOPIC -> BRIDGE / CALLBACK / ASSOCIATION -> NEW TOPIC. Use a) Tj
+0 -15 Td
+(semantic or emotional bridge. Do not jump from vulnerability to a generic question just to) Tj
+0 -15 Td
+(keep chat alive.) Tj
+0 -15 Td
+() Tj
+0 -15 Td
+(LOW ENERGY AND PAUSE Shorten first. If there is no opening, WAIT. After two failed probes,) Tj
+0 -15 Td
+(prefer WAIT or SPACE. A short reply alone is not proof of low interest.) Tj
+0 -15 Td
+() Tj
+0 -15 Td
+(REOPENING Treat a clear restart after a pause as a new temporal episode. Re-parse the latest) Tj
+0 -15 Td
+(hook and current mood. Do not blindly reuse old energy.) Tj
+0 -15 Td
+() Tj
+0 -15 Td
+(RECIPROCITY Evaluate patterns: initiation, question-back, self-disclosure, follow-up,) Tj
+0 -15 Td
+(callbacks, topic investment and recovery effort. Response speed is supporting evidence only.) Tj
+0 -15 Td
+() Tj
+0 -15 Td
+(OFFLINE TRANSITION Only suggest a next step when stage, context, comfort and reciprocity) Tj
+0 -15 Td
+(support it. Keep the move reversible and low pressure. Respect a clear no.) Tj
+0 -15 Td
+() Tj
+ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000000311 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1733
+%%EOF
