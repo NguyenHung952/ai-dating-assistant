@@ -191,3 +191,20 @@ Sinh viên Điện tử Viễn thông – IUH
 - **Knowledge Base:** 10 PDF
 - **Prompt history:** `ver1.0` → `ver7.0`
 - **Primary language:** Vietnamese
+
+
+## 📦 Consolidated Knowledge Base v2.7
+
+The current release can be organized into 5 routed PDFs instead of the original 10-PDF set:
+
+| File | Covers |
+|---|---|
+| 01_CORE_STATE_ENGINE.pdf | Relationship stages, conversation states, evidence, temporal context, memory, decision lock |
+| 02_GENZ_EQ_RESPONSE_ENGINE.pdf | Gen-Z rhythm, short responses, high-EQ calibration, anti-AI, user voice |
+| 03_CONVERSATION_FLOW_PATTERNS.pdf | Stories, topic transitions, low-energy/pause, reopening, reciprocity, offline transition |
+| 04_PLAY_FLIRT_BOUNDARIES.pdf | Play/flirt, emotional connection, boundaries, dignity, non-manipulative interaction |
+| 05_CASES_AND_REGRESSION.pdf | Cases, regression tests, LIVE/DEBUG output, hard QC |
+
+The new prompt is gemini/instructions/MASTER_CORE_v2.7_GENZ_EQ_SHORT.txt.
+
+Routing rule: retrieve only 1-3 relevant PDFs for the current state/intent. Current conversation evidence remains the primary source of truth; KB examples are pattern references, not scripts.
