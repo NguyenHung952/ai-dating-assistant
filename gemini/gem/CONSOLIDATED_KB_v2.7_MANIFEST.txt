@@ -1,0 +1,11 @@
+# Consolidated KB v2.7
+
+01_CORE_STATE_ENGINE.pdf
+02_GENZ_EQ_RESPONSE_ENGINE.pdf
+03_CONVERSATION_FLOW_PATTERNS.pdf
+04_PLAY_FLIRT_BOUNDARIES.pdf
+05_CASES_AND_REGRESSION.pdf
+
+Prompt: gemini/instructions/MASTER_CORE_v2.7_GENZ_EQ_SHORT.txt
+
+These five PDFs are the local release artifacts corresponding to the original 10-PDF Gemini KB, grouped by routing function.
