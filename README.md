@@ -53,6 +53,28 @@ QUALITY CONTROL
 
 Project ưu tiên evidence từ conversation hiện tại, kiểm tra giả thuyết thay thế và giữ mức độ không chắc chắn khi dữ liệu chưa đủ.
 
+## ✍️ Response Style
+
+Bản v2.6 tập trung làm cho câu trả lời nghe giống **tin nhắn tiếng Việt thật của người trẻ**, thay vì cố nhồi slang hoặc teencode.
+
+Ưu tiên:
+
+```text
+BELIEVABILITY > EMOTIONAL CALIBRATION > USER VOICE > NATURAL VIETNAMESE > GEN-Z RHYTHM > TEENCODE / SLANG > EMOJI > CLEVERNESS
+```
+
+### Natural Gen-Z
+
+Gen-Z được thể hiện trước hết qua nhịp chat: câu ngắn, reaction tự nhiên, fragment khi phù hợp, lowercase/punctuation theo USER và từ ngữ đời thường. Không ép mọi candidate phải có slang, emoji, `haha` hoặc `=))`.
+
+### Teencode calibration
+
+Teencode là **optional surface layer**, được calibration theo USER voice, context, emotional state và relationship stage. Không vì OTHER hoặc dataset dùng nhiều teencode mà tự động bắt chước.
+
+### High-EQ
+
+EQ cao được thể hiện qua phản ứng đúng mức với emotional need: acknowledge cụ thể, không over-read, không biến reply thành therapy/coaching, và khi người kia vulnerable thì ưu tiên comfort và space hơn escalation.
+
 ## 📚 Knowledge Base
 
 Thư mục `gemini/gem/` hiện có 10 PDF knowledge base:
