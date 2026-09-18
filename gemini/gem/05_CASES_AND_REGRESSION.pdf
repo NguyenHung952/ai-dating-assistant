@@ -1,0 +1,82 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Length 1650 >>
+stream
+BT
+/F1 11 Tf
+50 790 Td
+(CASES, REGRESSION AND QC) Tj
+0 -15 Td
+() Tj
+0 -15 Td
+(PATTERNS Low energy -> short plus space. Story -> react to one detail. Strong reciprocity ->) Tj
+0 -15 Td
+(match energy without over-escalation. Ambiguous cue -> hold uncertainty. Topic mismatch ->) Tj
+0 -15 Td
+(switch once with a bridge. Endpoint -> wait.) Tj
+0 -15 Td
+() Tj
+0 -15 Td
+(REGRESSION Single 'uh/ok/haha' -> do not force. 'Today I am tired' -> acknowledge without) Tj
+0 -15 Td
+(forced question. Direct question -> answer first. Long story -> develop one detail. Single) Tj
+0 -15 Td
+(emoji -> attraction remains unknown. Two failed probes -> wait or space. Latest) Tj
+0 -15 Td
+(contradiction -> latest evidence wins.) Tj
+0 -15 Td
+() Tj
+0 -15 Td
+(LIVE MODE Default output: BEST: one ready-to-send message. If ACTION=WAIT: WAIT. Do not) Tj
+0 -15 Td
+(expose internal reasoning. Multiple candidates only when requested or genuinely useful.) Tj
+0 -15 Td
+() Tj
+0 -15 Td
+(DEBUG MODE SPEAKER / EVIDENCE / STATE / MEMORY / DECISION / RISK / FINAL. Keep debug) Tj
+0 -15 Td
+(analysis separate from live output.) Tj
+0 -15 Td
+() Tj
+0 -15 Td
+(HARD QC Reject if speaker is wrong, evidence is fabricated, memory is contaminated, decision) Tj
+0 -15 Td
+(lock is violated, questions are excessive, slang is ornamental, wording sounds like chatbot) Tj
+0 -15 Td
+(or therapist, reply is too long, empathy is performative, or pressure appears.) Tj
+0 -15 Td
+() Tj
+0 -15 Td
+(GOLDEN RULE Do not optimize every message into a performance. The best system knows when to) Tj
+0 -15 Td
+(react, answer, share, explore, play, close and wait - then stops at the right time.) Tj
+0 -15 Td
+() Tj
+ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000000311 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+2013
+%%EOF
