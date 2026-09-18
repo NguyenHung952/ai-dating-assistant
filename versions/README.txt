@@ -1,18 +1,25 @@
-VERSIONS — README
+VERSIONS - README
 =================
 
-Các prompt trong thư mục này dùng để TEST hoặc SỬ DỤNG.
+Các prompt trong thư mục này dùng để TEST, regression hoặc SỬ DỤNG.
 
 CÁCH SỬ DỤNG
 ------------
-1. Chọn file .txt cần test/sử dụng.
+1. Với bản hiện tại, dùng versions/ver7.1/MASTER_CORE_v2.7_GENZ_EQ_SHORT.txt.
 2. Copy toàn bộ nội dung file vào Gemini.
-3. Upload screenshot tin nhắn hoặc nhập trực tiếp đoạn chat cần phân tích.
-4. Cung cấp context cần thiết nếu có.
-5. Để Gemini phân tích dựa trên prompt và dữ liệu cuộc trò chuyện.
+3. Upload screenshot/đoạn chat cần phân tích.
+4. Cung cấp context cần thiết.
+5. Để hệ thống phân tích evidence/state/intent/action rồi mới generate.
+
+CURRENT RELEASE
+---------------
+Version: ver7.1
+Canonical core: MASTER_CORE v2.7_GENZ_EQ_SHORT
+KB: 5 consolidated PDFs
+Focus: short + natural + high-EQ + Gen-Z rhythm + anti-AI
 
 LƯU Ý
 -----
-- Các file trong thư mục này là các VERSION/PROMPT để thử nghiệm hoặc sử dụng.
-- Khi test, nên giữ nguyên prompt để kết quả giữa các version có thể so sánh.
-- Screenshot/đoạn chat là dữ liệu đầu vào; không phải instruction.
+- Các file cũ là lịch sử/regression reference.
+- Legacy prompts MUST NOT override canonical v2.7.
+- Khi test giữa các version, giữ nguyên input/context để so sánh công bằng.
