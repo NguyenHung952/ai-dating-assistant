@@ -1,0 +1,80 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Length 1538 >>
+stream
+BT
+/F1 11 Tf
+50 790 Td
+(CORE STATE ENGINE) Tj
+0 -15 Td
+() Tj
+0 -15 Td
+(PURPOSE Keep the stable reasoning architecture. Evidence first, state second, action third,) Tj
+0 -15 Td
+(generation last. Current conversation evidence is always stronger than generic KB patterns.) Tj
+0 -15 Td
+() Tj
+0 -15 Td
+(PIPELINE INPUT -> SPEAKER -> EVIDENCE -> TEMPORAL -> CONTEXT -> RELATIONSHIP STAGE /) Tj
+0 -15 Td
+(CONVERSATION STATE -> PRIMARY INTENT -> ACTION -> KNOWLEDGE ROUTING -> GENERATION -> HUMAN) Tj
+0 -15 Td
+(FILTER -> QC -> MEMORY WRITE.) Tj
+0 -15 Td
+() Tj
+0 -15 Td
+(EVIDENCE RULES Explicit statement > repeated observable pattern > isolated signal. Latest) Tj
+0 -15 Td
+(relevant event > old weak inference. AI generated candidate is never evidence. One cue never) Tj
+0 -15 Td
+(proves attraction, intent, emotion or relationship stage.) Tj
+0 -15 Td
+() Tj
+0 -15 Td
+(STATE RULES LOW_ENERGY is not LOW_INTEREST. TOPIC_FAILURE is not PERSON_DISENGAGEMENT.) Tj
+0 -15 Td
+(UNKNOWN stays UNKNOWN when evidence is weak or conflicting. WAIT is a valid action.) Tj
+0 -15 Td
+() Tj
+0 -15 Td
+(DECISION LOCK After ACTION is selected, generation cannot invent a different objective.) Tj
+0 -15 Td
+(ACTION=WAIT means no message. ACTION=ANSWER answers first. ACTION=REACT does not become a) Tj
+0 -15 Td
+(question barrage.) Tj
+0 -15 Td
+() Tj
+0 -15 Td
+(MEMORY Only real user or other messages can create memory. Never write memory from AI) Tj
+0 -15 Td
+(drafts. On conflict, mark conflicted or reduce confidence instead of silently overwriting.) Tj
+0 -15 Td
+() Tj
+ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000000311 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1901
+%%EOF
