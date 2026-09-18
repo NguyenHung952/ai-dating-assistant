@@ -23,7 +23,7 @@ FACT ≠ SIGNAL ≠ INTERPRETATION ≠ INFERENCE ≠ DECISION
 
 ## 🧠 Hệ thống hiện tại
 
-Phiên bản Gemini hiện tại sử dụng **MASTER_CORE v2.6_GENZ_EQ**, kế thừa reasoning/decision architecture của v2.5 và bổ sung lớp response surface cho natural Gen-Z Vietnamese, teencode calibration và high-EQ emotional calibration.
+Phiên bản Gemini hiện tại sử dụng **MASTER_CORE v2.7_GENZ_EQ_SHORT**, kế thừa reasoning/decision architecture của v2.5 và bổ sung lớp response surface cho natural Gen-Z Vietnamese, teencode calibration và high-EQ emotional calibration.
 
 ```text
 INPUT
@@ -77,20 +77,15 @@ EQ cao được thể hiện qua phản ứng đúng mức với emotional need:
 
 ## 📚 Knowledge Base
 
-Thư mục `gemini/gem/` hiện có 10 PDF knowledge base:
+Thư mục `gemini/gem/` hiện có 5 PDF knowledge base:
 
 | # | Tài liệu |
 |---|---|
-| 01 | Relationship Stages |
-| 02 | Conversation States |
-| 03 | Gen Z Real Conversations |
-| 04 | Cases Success / Failure |
-| 05 | Flirting Cases |
-| 06 | Emotional Connection |
-| 07 | Topic Transition |
-| 08 | Low Energy / Pause |
-| 09 | Reopening Conversations |
-| 10 | Meeting Transition |
+| 01 | Core State Engine |
+| 02 | Gen-Z + High-EQ Response Engine |
+| 03 | Conversation Flow Patterns |
+| 04 | Play, Flirt & Boundaries |
+| 05 | Cases, Regression & QC |
 
 Các tài liệu này dùng để **routing và tham chiếu pattern**, không phải để sao chép nguyên câu trả lời.
 
@@ -121,7 +116,7 @@ ai-dating-assistant/
 │   └── README.txt
 ├── gemini/
 │   ├── gem/
-│   │   └── 10 PDF Knowledge Base
+│   │   └── 5 PDF Knowledge Base
 │   └── instructions/
 │       ├── MASTER_CORE v2.4.txt
 │       ├── MASTER_CORE v2.5.txt
@@ -161,7 +156,7 @@ Sau đó cung cấp theo intake của prompt:
 5. Để hệ thống phân tích evidence và conversation state.
 6. Chọn candidate response phù hợp.
 
-Các prompt và case cũ trong `versions/` nên được xem là **lịch sử phát triển/tham chiếu**, không phải script bắt buộc.
+Các prompt cũ trong `versions/` nên được xem là **lịch sử phát triển/tham chiếu**. Bản v2.7 là canonical response/core specification.
 
 ## 🧪 Định hướng phát triển
 
@@ -188,14 +183,14 @@ Sinh viên Điện tử Viễn thông – IUH
 - **Current system:** Gemini Conversation Copilot
 - **Reasoning / decision core:** `MASTER_CORE v2.6_GENZ_EQ`
 - **Base architecture:** `MASTER_CORE v2.5`
-- **Knowledge Base:** 10 PDF
-- **Prompt history:** `ver1.0` → `ver7.0`
+- **Knowledge Base:** 5 PDF
+- **Prompt history:** `ver1.0` → `ver7.1`
 - **Primary language:** Vietnamese
 
 
 ## 📦 Consolidated Knowledge Base v2.7
 
-The current release can be organized into 5 routed PDFs instead of the original 10-PDF set:
+The current release is the v2.7 consolidated KB: 5 routed PDFs replacing the original 10-PDF Gemini set.
 
 | File | Covers |
 |---|---|
