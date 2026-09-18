@@ -1,0 +1,36 @@
+name: Build consolidated KB PDFs
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "gemini/gem/source/**"
+      - "scripts/build_kb_pdfs.py"
+      - ".github/workflows/build-kb-pdfs.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install PDF dependencies
+        run: pip install reportlab
+      - name: Build PDFs
+        run: python scripts/build_kb_pdfs.py
+      - name: Commit generated PDFs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add gemini/gem/*.pdf
+          git rm -f gemini/gem/01_RELATIONSHIP_STAGES.pdf gemini/gem/02_CONVERSATION_STATES.pdf gemini/gem/03_GENZ_REAL_CONVERSATIONS.pdf gemini/gem/04_CASES_SUCCESS_FAILURE.pdf gemini/gem/05_FLIRTING_CASES.pdf gemini/gem/06_EMOTIONAL_CONNECTION.pdf gemini/gem/07_TOPIC_TRANSITION.pdf gemini/gem/08_LOW_ENERGY_PAUSE.pdf gemini/gem/09_REOPENING_CONVERSATIONS.pdf gemini/gem/10_MEETING_TRANSITION.pdf || true
+          git add gemini/gem/*.pdf
+          git diff --cached --quiet && exit 0
+          git commit -m "build: regenerate consolidated v2.7 KB PDFs [skip pdf build]"
+          git push
