@@ -1,11 +1,11 @@
 VERSIONS - README
 =================
 
-Các prompt trong thư mục này dùng để TEST, regression hoặc SỬ DỤNG.
+Các prompt trong thư mục này dùng để TEST, regression hoặc tham chiếu lịch sử.
 
 CÁCH SỬ DỤNG
 ------------
-1. Với bản hiện tại, dùng versions/ver7.1/MASTER_CORE_v2.7_GENZ_EQ_SHORT.txt.
+1. Với bản hiện tại, dùng archive/versions/ver7.1/MASTER_CORE_v2.7_GENZ_EQ_SHORT.txt.
 2. Copy toàn bộ nội dung file vào Gemini.
 3. Upload screenshot/đoạn chat cần phân tích.
 4. Cung cấp context cần thiết.
