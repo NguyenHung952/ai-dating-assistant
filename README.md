@@ -77,7 +77,7 @@ EQ cao được thể hiện qua phản ứng đúng mức với emotional need:
 
 ## 📚 Knowledge Base
 
-Thư mục `gemini/gem/` hiện có 5 PDF knowledge base:
+Thư mục `gemini/knowledge-base/` hiện có 5 PDF knowledge base:
 
 | # | Tài liệu |
 |---|---|
@@ -111,17 +111,19 @@ ai-dating-assistant/
 ├── README.md
 ├── claude/
 │   └── SKILL.md
-├── example/
+├── examples/
 │   ├── NHAN_TIN.zip
 │   └── README.txt
 ├── gemini/
-│   ├── gem/
-│   │   └── 5 PDF Knowledge Base
+│   ├── knowledge-base/
+│   │   ├── 01_CORE_STATE_ENGINE.pdf
+│   │   ├── 02_GENZ_EQ_RESPONSE_ENGINE.pdf
+│   │   ├── 03_CONVERSATION_FLOW_PATTERNS.pdf
+│   │   ├── 04_PLAY_FLIRT_BOUNDARIES.pdf
+│   │   └── 05_CASES_AND_REGRESSION.pdf
 │   └── instructions/
-│       ├── MASTER_CORE v2.4.txt
-│       ├── MASTER_CORE v2.5.txt
-│       └── README_v2.5.txt
-└── versions/
+└── archive/
+    └── versions/
     ├── ver1.0/
     ├── ver2.0/
     ├── ver3.0/
@@ -133,9 +135,9 @@ ai-dating-assistant/
 ### Vai trò thư mục
 
 - **`gemini/`** — hệ thống Gemini hiện tại, gồm Master Core và Knowledge Base.
-- **`versions/`** — lịch sử phát triển prompt từ `ver1.0` đến `ver6.0`.
+- **`archive/versions/`** — lịch sử phát triển prompt từ `ver1.0` đến `ver7.1`.
 - **`claude/`** — skill/instruction dành cho Claude.
-- **`example/`** — ví dụ và tài liệu phục vụ thử nghiệm.
+- **`examples/`** — ví dụ và tài liệu phục vụ thử nghiệm.
 
 ## 🚀 Cách sử dụng
 
@@ -200,6 +202,6 @@ The current release is the v2.7 consolidated KB: 5 routed PDFs replacing the ori
 | 04_PLAY_FLIRT_BOUNDARIES.pdf | Play/flirt, emotional connection, boundaries, dignity, non-manipulative interaction |
 | 05_CASES_AND_REGRESSION.pdf | Cases, regression tests, LIVE/DEBUG output, hard QC |
 
-The new prompt is gemini/instructions/MASTER_CORE_v2.7_GENZ_EQ_SHORT.txt.
+The new prompt is gemini/instructions/### MASTER_CORE v2.7.txt.
 
 Routing rule: retrieve only 1-3 relevant PDFs for the current state/intent. Current conversation evidence remains the primary source of truth; KB examples are pattern references, not scripts.
