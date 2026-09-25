@@ -1,0 +1,27 @@
+{
+  "15_named_files": true,
+  "core_STRANGER": "PASS",
+  "core_ADDED_ONLY": "PASS",
+  "core_EARLY_TALKING": "PASS",
+  "core_MET_IN_PERSON": "PASS",
+  "core_DATING": "PASS",
+  "golden_pairs": 24,
+  "subscenario_counts": {
+    "STRANGER": 12,
+    "ADDED_ONLY": 12,
+    "EARLY_TALKING": 12,
+    "MET_IN_PERSON": 12,
+    "DATING": 12
+  },
+  "style_profiles": 5,
+  "recovery_protocols": 7,
+  "memory_json": "PASS",
+  "knowledge_pdfs": 10,
+  "appendix_docs": 4,
+  "prohibited_Vui lòng xác định RELATIONSHIP_STAGE": true,
+  "prohibited_USER_SELECTED_STAGE": true,
+  "prohibited_NO_STAGE -> NO_CANDIDATE": true,
+  "prohibited_CONFIRMED_RELATIONSHIP": false,
+  "prohibited_UNKNOWN is a selectable": true,
+  "prohibited_Choose stage": true
+}
