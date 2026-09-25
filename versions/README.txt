@@ -1,25 +1,25 @@
-VERSIONS - README
-=================
+# Prompt Version Archive
 
-Các prompt trong thư mục này dùng để TEST, regression hoặc SỬ DỤNG.
+Thư mục này lưu lịch sử prompt theo từng version.
 
-CÁCH SỬ DỤNG
-------------
-1. Với bản hiện tại, dùng versions/ver7.1/MASTER_CORE_v2.7_GENZ_EQ_SHORT.txt.
-2. Copy toàn bộ nội dung file vào Gemini.
-3. Upload screenshot/đoạn chat cần phân tích.
-4. Cung cấp context cần thiết.
-5. Để hệ thống phân tích evidence/state/intent/action rồi mới generate.
+Cấu trúc chuẩn:
 
-CURRENT RELEASE
----------------
-Version: ver7.1
-Canonical core: MASTER_CORE v2.7_GENZ_EQ_SHORT
-KB: 5 consolidated PDFs
-Focus: short + natural + high-EQ + Gen-Z rhythm + anti-AI
+versions/
+├── ver1.0/
+├── ver2.0/
+├── ver3.0/
+├── ver4.0/
+├── ver5.0/
+├── ver6.0/
+├── ver7.0/
+└── ver7.1/
 
-LƯU Ý
------
-- Các file cũ là lịch sử/regression reference.
-- Legacy prompts MUST NOT override canonical v2.7.
-- Khi test giữa các version, giữ nguyên input/context để so sánh công bằng.
+Mỗi version được tách thành:
+- prompts/ : prompt/instruction files của version đó.
+- docs/    : release notes hoặc tài liệu mô tả version.
+- README.txt (nếu version có README).
+
+Bản stage-specific mới nhất hiện tại là ver7.1:
+prompts/MASTER_CORE_v2.7_GENZ_EQ_SHORT.txt
+
+Lịch sử được giữ nguyên; thay đổi tổ chức thư mục không xoá prompt cũ.

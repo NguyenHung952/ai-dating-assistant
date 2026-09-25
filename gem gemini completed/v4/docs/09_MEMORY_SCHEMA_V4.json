@@ -1,0 +1,259 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MASTER_CORE_V4_ConversationMemory",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "person_id",
+    "stage",
+    "facts",
+    "topics_covered",
+    "inside_jokes",
+    "boundaries",
+    "preferences",
+    "last_state",
+    "ledger_snapshot",
+    "last_5_turns",
+    "outcome_history"
+  ],
+  "properties": {
+    "person_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Internal identifier; do not use full legal name as the runtime key when unnecessary."
+    },
+    "stage": {
+      "type": "string",
+      "enum": [
+        "STRANGER",
+        "ADDED_ONLY",
+        "EARLY_TALKING",
+        "MET_IN_PERSON",
+        "DATING"
+      ]
+    },
+    "facts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "key",
+          "value",
+          "source_turn"
+        ],
+        "properties": {
+          "key": {
+            "type": "string"
+          },
+          "value": {},
+          "source_turn": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "topics_covered": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "inside_jokes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "boundaries": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "preferences": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "last_state": {
+      "type": "string",
+      "enum": [
+        "OPENING",
+        "BUILDING",
+        "FLOWING",
+        "PLAYFUL",
+        "DEEPENING",
+        "LOW_ENERGY",
+        "PAUSE",
+        "REOPENING",
+        "REPAIR",
+        "ENDPOINT",
+        "TOPIC_TRANSITION",
+        "DEAD_CHAT"
+      ]
+    },
+    "ledger_snapshot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "topic_openers",
+        "questions_back",
+        "expansion_ratio",
+        "self_disclosure",
+        "repeated_patterns"
+      ],
+      "properties": {
+        "topic_openers": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "user",
+            "her"
+          ],
+          "properties": {
+            "user": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "her": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        "questions_back": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "user",
+            "her"
+          ],
+          "properties": {
+            "user": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "her": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        "expansion_ratio": {
+          "type": "string",
+          "description": "Compact representation such as user:her=2:3; do not interpret as attraction score."
+        },
+        "self_disclosure": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "user",
+            "her"
+          ],
+          "properties": {
+            "user": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "her": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        "repeated_patterns": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "last_5_turns": {
+      "type": "array",
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "turn",
+          "speaker",
+          "text"
+        ],
+        "properties": {
+          "turn": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "speaker": {
+            "type": "string",
+            "enum": [
+              "USER",
+              "HER",
+              "UNKNOWN"
+            ]
+          },
+          "text": {
+            "type": "string"
+          },
+          "topic": {
+            "type": "string"
+          },
+          "action": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "source": {
+            "type": "string",
+            "enum": [
+              "REAL_CONVERSATION",
+              "USER_REPORTED",
+              "SCREENSHOT",
+              "UNKNOWN"
+            ]
+          }
+        }
+      }
+    },
+    "outcome_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "event",
+          "result"
+        ],
+        "properties": {
+          "event": {
+            "type": "string"
+          },
+          "result": {
+            "type": "string",
+            "enum": [
+              "positive",
+              "neutral",
+              "negative",
+              "unknown"
+            ]
+          },
+          "source_turn": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

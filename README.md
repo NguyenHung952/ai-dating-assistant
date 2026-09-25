@@ -1,40 +1,73 @@
 # 💬 AI Dating Assistant
 
-> Kho lưu trữ prompt và tài liệu cho hệ thống **Conversational AI / Prompt Engineering** hỗ trợ phân tích và soạn phản hồi hội thoại tiếng Việt theo ngữ cảnh.
+> Kho lưu trữ prompt, Knowledge Base và tài liệu nghiên cứu cho hệ thống Conversational AI hỗ trợ phân tích ngữ cảnh và soạn phản hồi hội thoại tiếng Việt.
 
 ## 🎯 Mục tiêu
 
-Project tập trung vào việc phát triển một **Conversation Copilot** cho các model AI, với trọng tâm:
+Project tập trung vào Conversation Copilot / Prompt Engineering, với các năng lực chính:
 
-- Phân tích screenshot hoặc đoạn chat.
-- Xác định speaker và context.
-- Khóa relationship stage và cách xưng hô.
-- Phân tích evidence, signal, contradiction và uncertainty.
-- Xác định conversation state và intent.
-- Chọn response strategy phù hợp.
-- Tạo nhiều candidate response tự nhiên, ngắn gọn.
-- Giảm overinterpretation và cảm giác “mùi AI”.
+- Phân tích screenshot, tin nhắn và transcript.
+- Xác định speaker, context và topic hiện tại.
+- Tách OBSERVED / SIGNAL / INFERENCE / DECISION, giữ uncertainty khi evidence chưa đủ.
+- Khóa relationship stage theo từng core thay vì tự suy diễn stage.
+- Xác định conversation state và primary intent.
+- Route Knowledge Base theo stage/state/intent.
+- Sinh response ngắn, tự nhiên, có continuity và pressure phù hợp.
+- Kiểm tra anti-AI-smell, question budget, reply-length và reciprocity.
+- Hỗ trợ nhiều stage từ STRANGER đến DATING, với các bản archive từ v1 đến v7.1.
 
-Nguyên tắc cốt lõi:
+Nguyên tắc xuyên suốt:
 
 ```text
-FACT ≠ SIGNAL ≠ INTERPRETATION ≠ INFERENCE ≠ DECISION
+CURRENT CONVERSATION > VIRTUAL MEMORY > KNOWLEDGE BASE
+FACT ≠ SIGNAL ≠ INFERENCE ≠ DECISION
+REPEATED PATTERNS > ISOLATED SIGNALS
+UNCERTAINTY > FALSE CERTAINTY
 ```
 
-## 🧠 Hệ thống hiện tại
+## 🧠 Trạng thái hiện tại
 
-Phiên bản Gemini hiện tại sử dụng **MASTER_CORE v2.7_GENZ_EQ_SHORT**, kế thừa reasoning/decision architecture của v2.5 và bổ sung lớp response surface cho natural Gen-Z Vietnamese, teencode calibration và high-EQ emotional calibration.
+Bản release stage-specific mới nhất trong repository là **v7.1**, với prompt canonical:
+
+```text
+versions/ver7.1/prompts/MASTER_CORE_v2.7_GENZ_EQ_SHORT.txt
+```
+
+Bộ v7.1 stage cores nằm trong:
+
+```text
+gem gemini completed/v7/core/
+gem gemini completed/v7/knowledge/
+```
+
+V7.1 chuyển sang mô hình output rất ngắn, mặc định 2 candidates, HARD MAX 80 ký tự cho candidate, fragment mode, platform calibration và virtual-memory schema. Current Conversation vẫn là nguồn chính; Knowledge Base chỉ hỗ trợ pattern/function/anti-pattern.
+
+Song song, repository có **Consolidated KB v2.7 gồm 5 PDF** tại `gemini/gem/`. Các PDF này được build từ `gemini/gem/source/` bằng `scripts/build_kb_pdfs.py`.
+
+## 📚 Knowledge Base hiện tại
+
+| File | Vai trò |
+|---|---|
+| `01_CORE_STATE_ENGINE.pdf` | Relationship stage, conversation state, evidence, memory, decision lock |
+| `02_GENZ_EQ_RESPONSE_ENGINE.pdf` | Natural Gen-Z rhythm, short response, high-EQ, anti-AI |
+| `03_CONVERSATION_FLOW_PATTERNS.pdf` | Topic transition, low-energy, reopening, reciprocity, offline transition |
+| `04_PLAY_FLIRT_BOUNDARIES.pdf` | Play/flirt, emotional connection, boundaries và non-manipulative interaction |
+| `05_CASES_AND_REGRESSION.pdf` | Cases, regression, LIVE/DEBUG và QC |
+
+Quy tắc routing: thường chỉ retrieve 1–3 PDF phù hợp; không copy historical cases thành câu trả lời; conversation hiện tại luôn được ưu tiên.
+
+## ✍️ Response architecture
+
+Pipeline tổng quát:
 
 ```text
 INPUT
   ↓
 INPUT DETECTION
   ↓
+EVIDENCE / CONTEXT
+  ↓
 RELATIONSHIP STAGE
-  ↓
-EVIDENCE ANALYSIS
-  ↓
-REASONING / DECISION
   ↓
 CONVERSATION STATE
   ↓
@@ -48,158 +81,136 @@ RESPONSE STRATEGY
   ↓
 CANDIDATE ENGINE
   ↓
-QUALITY CONTROL
+ANTI-AI-SMELL / QC
+  ↓
+SEND-READY OUTPUT
 ```
 
-Project ưu tiên evidence từ conversation hiện tại, kiểm tra giả thuyết thay thế và giữ mức độ không chắc chắn khi dữ liệu chưa đủ.
-
-## ✍️ Response Style
-
-Bản v2.6 tập trung làm cho câu trả lời nghe giống **tin nhắn tiếng Việt thật của người trẻ**, thay vì cố nhồi slang hoặc teencode.
-
-Ưu tiên:
+Các response function thường gặp:
 
 ```text
-BELIEVABILITY > EMOTIONAL CALIBRATION > USER VOICE > NATURAL VIETNAMESE > GEN-Z RHYTHM > TEENCODE / SLANG > EMOJI > CLEVERNESS
+ACKNOWLEDGE · CONTINUE · CONTRIBUTE · ASK · CLARIFY · REPAIR · CLOSE
 ```
 
-### Natural Gen-Z
+Các bản V3–V6 phát triển mạnh hook engine, question budget, reply-length matching, reciprocity ledger, pressure downgrade và virtual memory. V7.1 rút gọn output xuống candidate cực ngắn và tăng hard length control.
 
-Gen-Z được thể hiện trước hết qua nhịp chat: câu ngắn, reaction tự nhiên, fragment khi phù hợp, lowercase/punctuation theo USER và từ ngữ đời thường. Không ép mọi candidate phải có slang, emoji, `haha` hoặc `=))`.
-
-### Teencode calibration
-
-Teencode là **optional surface layer**, được calibration theo USER voice, context, emotional state và relationship stage. Không vì OTHER hoặc dataset dùng nhiều teencode mà tự động bắt chước.
-
-### High-EQ
-
-EQ cao được thể hiện qua phản ứng đúng mức với emotional need: acknowledge cụ thể, không over-read, không biến reply thành therapy/coaching, và khi người kia vulnerable thì ưu tiên comfort và space hơn escalation.
-
-## 📚 Knowledge Base
-
-Thư mục `gemini/gem/` hiện có 5 PDF knowledge base:
-
-| # | Tài liệu |
-|---|---|
-| 01 | Core State Engine |
-| 02 | Gen-Z + High-EQ Response Engine |
-| 03 | Conversation Flow Patterns |
-| 04 | Play, Flirt & Boundaries |
-| 05 | Cases, Regression & QC |
-
-Các tài liệu này dùng để **routing và tham chiếu pattern**, không phải để sao chép nguyên câu trả lời.
-
-## ✍️ Response Strategy
-
-Các hướng xử lý chính gồm:
-
-- `PLAY` — tạo nhịp vui.
-- `CONNECT` — tăng kết nối.
-- `CONTINUE` — duy trì hội thoại.
-- `CLARIFY` — làm rõ.
-- `REPAIR` — xử lý interaction bị lệch.
-- `TEASE` — trêu nhẹ.
-- `FLIRT` — flirt phù hợp context.
-- `ESCALATE / DE-ESCALATE` — điều chỉnh mức độ tương tác.
-- `SUPPORT` — phản hồi hỗ trợ.
-- `CLOSE` — kết thúc tự nhiên.
-
-## 📂 Cấu trúc Repository
+## 📂 Cấu trúc repository
 
 ```text
 ai-dating-assistant/
 ├── README.md
+├── .github/
+│   └── workflows/
+│       └── build-kb-pdfs.yml
 ├── claude/
+│   ├── README.txt
 │   └── SKILL.md
 ├── example/
-│   ├── NHAN_TIN.zip
-│   └── README.txt
+│   ├── README.txt
+│   └── NHAN_TIN.zip
 ├── gemini/
 │   ├── gem/
-│   │   └── 5 PDF Knowledge Base
-│   └── instructions/
-│       ├── MASTER_CORE v2.4.txt
-│       ├── MASTER_CORE v2.5.txt
-│       └── README_v2.5.txt
-└── versions/
-    ├── ver1.0/
-    ├── ver2.0/
-    ├── ver3.0/
-    ├── ver4.0/
-    ├── ver5.0/
-    └── ver6.0/
+│   │   ├── *.pdf                  # Consolidated release KB
+│   │   ├── CONSOLIDATED_KB_v2.7_MANIFEST.txt
+│   │   ├── legacy/                # Legacy 10-PDF KB
+│   │   └── source/                # Markdown source để build PDF
+│   ├── instructions/              # Prompt/instruction history
+│   └── README.txt
+├── gem gemini completed/
+│   ├── README.md
+│   ├── v1/ ... v7/
+│   │   ├── README.txt
+│   │   ├── core/                  # Runtime cores
+│   │   ├── knowledge/             # PDF knowledge bases
+│   │   └── docs/                  # Research/change logs/schema
+│   └── ...
+├── versions/
+│   ├── README.txt
+│   └── ver1.0/ ... ver7.1/
+│       ├── README.txt             # khi có
+│       ├── prompts/               # Prompt history
+│       └── docs/                  # Release notes
+└── scripts/
+    └── build_kb_pdfs.py
 ```
 
-### Vai trò thư mục
+### Ý nghĩa từng khu vực
 
-- **`gemini/`** — hệ thống Gemini hiện tại, gồm Master Core và Knowledge Base.
-- **`versions/`** — lịch sử phát triển prompt từ `ver1.0` đến `ver6.0`.
-- **`claude/`** — skill/instruction dành cho Claude.
-- **`example/`** — ví dụ và tài liệu phục vụ thử nghiệm.
+- **`gemini/`**: release pipeline hiện tại cho Gemini, gồm instruction, source và consolidated PDF KB.
+- **`gem gemini completed/`**: archive stage-specific hoàn chỉnh từ v1 đến v7.1; mỗi version được tách rõ `core/`, `knowledge/`, `docs/`.
+- **`versions/`**: lịch sử prompt cũ theo phiên bản; prompt được gom vào `prompts/`, release note vào `docs/`.
+- **`claude/`**: skill/instruction dành cho Claude.
+- **`example/`**: dữ liệu/example phục vụ thử nghiệm.
+- **`scripts/` + `.github/workflows/`**: pipeline build PDF tự động.
 
-## 🚀 Cách sử dụng
+## 📊 Thống kê repository
+
+Tại thời điểm audit cấu trúc:
+
+| Metric | Count |
+|---|---:|
+| Files | **208** |
+| Markdown `.md` | 20 |
+| Text `.txt` | 115 |
+| PDF `.pdf` | 60 |
+| JSON `.json` | 2 |
+| Python `.py` | 1 |
+| YAML `.yml` | 1 |
+| ZIP `.zip` | 1 |
+| Files không extension | 8 |
+
+Tổng 208 file được giữ nguyên về số lượng; lần dọn này chủ yếu **di chuyển và phân loại**, không xoá lịch sử.
+
+## 🧭 Lịch sử phát triển
+
+- **v1–v2**: stage-locked cores + 10-PDF case/knowledge set.
+- **v3**: research notes, hook engine, question budget, reply-length matching, reciprocity và anti-AI-smell được hệ thống hóa.
+- **v4**: mở rộng memory/schema, sub-scenario, golden examples, failure recovery, style/safety và validation.
+- **v5**: stage cores thống nhất, scorecard nội bộ, human approval và routing theo stage/state/intent.
+- **v6**: bổ sung virtual memory protocol và regression checks.
+- **v7.0**: tiếp tục hoàn thiện Human Conversation Copilot.
+- **v7.1**: short-response engine, 2 candidates mặc định, fragment mode, platform calibration và hard 80-character budget.
+
+## 🚀 Sử dụng
 
 ### Gemini
 
-Có thể bắt đầu từ:
+Nếu cần dùng bản consolidated KB, bắt đầu từ:
 
 ```text
 gemini/instructions/
+gemini/gem/
 ```
 
-Sau đó cung cấp theo intake của prompt:
+Nếu cần xem bản stage-specific mới nhất:
 
-1. Relationship Stage.
-2. Cách xưng hô.
-3. Screenshot hoặc đoạn chat.
-4. Context cần thiết.
-5. Để hệ thống phân tích evidence và conversation state.
-6. Chọn candidate response phù hợp.
+```text
+versions/ver7.1/prompts/MASTER_CORE_v2.7_GENZ_EQ_SHORT.txt
+gem gemini completed/v7/core/
+gem gemini completed/v7/knowledge/
+```
 
-Các prompt cũ trong `versions/` nên được xem là **lịch sử phát triển/tham chiếu**. Bản v2.7 là canonical response/core specification.
+### Build lại PDF
 
-## 🧪 Định hướng phát triển
+Workflow hiện tại build PDF từ:
 
-- Cải thiện speaker attribution.
-- Tăng độ ổn định khi context không đầy đủ.
-- Cải thiện continuity và memory.
-- Tối ưu Knowledge Base retrieval.
-- Giảm hallucination và overinterpretation.
-- Tiếp tục phát triển pipeline đa model Gemini / Claude.
+```text
+gemini/gem/source/*.md
+        ↓
+scripts/build_kb_pdfs.py
+        ↓
+gemini/gem/*.pdf
+```
+
+GitHub Actions có workflow `.github/workflows/build-kb-pdfs.yml` để tự động build khi source hoặc script thay đổi.
 
 ## ⚠️ Lưu ý
 
-Đây là framework prompt / conversational assistant, không phải công cụ có thể xác định chắc chắn cảm xúc, attraction hay ý định thật của người khác. Khi evidence yếu, hệ thống nên giữ uncertainty và ưu tiên hành động tự nhiên, ít áp lực.
+Đây là framework prompt/conversational assistant, không phải công cụ có thể xác định chắc chắn cảm xúc, attraction hay ý định thật của người khác. Evidence từ một tin nhắn riêng lẻ không đủ để kết luận. Các heuristic như question ratio, sentence budget, reciprocity threshold hay character budget là **engine design policies**, không phải định luật tâm lý.
 
-**Lưu ý bảo mật:** trước khi public repository, kiểm tra screenshot, conversation, tài khoản, dữ liệu cá nhân hoặc dữ liệu bên thứ ba có trong project.
+Trước khi public/share repository, nên kiểm tra screenshot, transcript, tài khoản, dữ liệu cá nhân và dữ liệu bên thứ ba.
 
 ## 👨‍💻 Author
 
 **Nguyễn Ngọc Hùng**  
 Sinh viên Điện tử Viễn thông – IUH
-
-## 📌 Project Status
-
-- **Current system:** Gemini Conversation Copilot
-- **Reasoning / decision core:** `MASTER_CORE v2.6_GENZ_EQ`
-- **Base architecture:** `MASTER_CORE v2.5`
-- **Knowledge Base:** 5 PDF
-- **Prompt history:** `ver1.0` → `ver7.1`
-- **Primary language:** Vietnamese
-
-
-## 📦 Consolidated Knowledge Base v2.7
-
-The current release is the v2.7 consolidated KB: 5 routed PDFs replacing the original 10-PDF Gemini set.
-
-| File | Covers |
-|---|---|
-| 01_CORE_STATE_ENGINE.pdf | Relationship stages, conversation states, evidence, temporal context, memory, decision lock |
-| 02_GENZ_EQ_RESPONSE_ENGINE.pdf | Gen-Z rhythm, short responses, high-EQ calibration, anti-AI, user voice |
-| 03_CONVERSATION_FLOW_PATTERNS.pdf | Stories, topic transitions, low-energy/pause, reopening, reciprocity, offline transition |
-| 04_PLAY_FLIRT_BOUNDARIES.pdf | Play/flirt, emotional connection, boundaries, dignity, non-manipulative interaction |
-| 05_CASES_AND_REGRESSION.pdf | Cases, regression tests, LIVE/DEBUG output, hard QC |
-
-The new prompt is gemini/instructions/MASTER_CORE_v2.7_GENZ_EQ_SHORT.txt.
-
-Routing rule: retrieve only 1-3 relevant PDFs for the current state/intent. Current conversation evidence remains the primary source of truth; KB examples are pattern references, not scripts.
