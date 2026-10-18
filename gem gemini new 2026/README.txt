@@ -1,53 +1,38 @@
-GEM GEMINI NEW 2026
-===================
+# GEM GEMINI NEW 2026
 
-Muc dich
--------
-Thu muc nay luu tru cac ban phat trien cua bo huong dan Gemini cho he thong chat hen ho, tu V6 den V9, cung voi goi cap nhat KB V8 va tai lieu nguon.
+## Mục đích
+Thư mục lưu các thế hệ phát triển của bộ hướng dẫn Gemini cho hệ thống chat hẹn hò (V6–V9), gói cập nhật KB V8 và tài liệu nguồn.
 
-Cau truc thu muc
-----------------
-00_ARCHIVES/
-  Cac file ZIP goc de tai ve, dong goi hoac luu tru.
+## Cấu trúc thư mục
 
-01_VERSIONS/
-  V6_REPAIRED/          Ban V6 da sua loi.
-  V7_FLIRT_UPGRADE/     Ban nang cap flirt.
-  V7_REALTIME_UPGRADE/  Ban nang cap xu ly hoi thoai theo thoi gian thuc.
-  V8_UPGRADE/           Ban V8.
-  V9_FINAL/             Cac ban V9 va cac bien the/lan cap nhat.
-  V9_FINAL_V6/          Goi legacy V6 duoc luu trong bo V9.
+- **00_ARCHIVES/** — Các file ZIP gốc để tải về, đóng gói hoặc lưu trữ.
+- **01_VERSIONS/**
+  - **V6_REPAIRED/** — Bản V6 đã sửa lỗi.
+  - **V7_FLIRT_UPGRADE/** — Bản nâng cấp flirt.
+  - **V7_REALTIME_UPGRADE/** — Bản nâng cấp xử lý hội thoại theo thời gian thực.
+  - **V8_UPGRADE/** — Bộ V8.
+  - **V9_FINAL/**
+    - **v1/** đến **v5/** — Các bản V9 và những lần cập nhật được giữ lại để đối chiếu.
+    - **legacy_v6/** — Gói legacy V6 được lưu cùng nhóm V9.
+- **02_SOURCE/** — Tài liệu DOCX gốc và danh sách file nguồn.
+- **03_V8_KB_DOCX_SAFE_UPDATE/** — Gói cập nhật KB V8 từ DOCX và các tài liệu liên quan.
+- **README.txt** — Hướng dẫn nhanh cho thư mục này.
 
-02_SOURCE/
-  Tai lieu DOCX goc va danh sach file nguon.
+## Nên bắt đầu từ đâu?
 
-03_V8_KB_DOCX_SAFE_UPDATE/
-  Goi cap nhat KB V8 tu DOCX va cac tai lieu lien quan.
+1. **Dùng V8:** xem `01_VERSIONS/V8_UPGRADE/` và đối chiếu với `03_V8_KB_DOCX_SAFE_UPDATE/`.
+2. **Dùng V9:** bắt đầu ở `01_VERSIONS/V9_FINAL/v1/`; đọc changelog/QA report trước khi chọn phiên bản.
+3. **Xem tài liệu nguồn:** mở `02_SOURCE/Bao-Cao-Bo-Day-Con-Tan-Gai-Full.docx`.
+4. **Tìm gói ZIP:** xem `00_ARCHIVES/`.
 
-README.txt
-  Huong dan nhanh cho thu muc nay.
+## Quy ước quản lý
 
-Nen mo file nao truoc?
-----------------------
-1. Neu can bo V8: mo 01_VERSIONS/V8_UPGRADE/ va doi chieu voi
-   03_V8_KB_DOCX_SAFE_UPDATE/.
-2. Neu can ban V9: bat dau tu 01_VERSIONS/V9_FINAL/; cac thu muc v2, v3...
-   duoc giu lai de doi chieu lich su, khong tu dong coi la ban moi nhat.
-3. Neu can xem nguon phan tich: mo 02_SOURCE/Bao-Cao-Bo-Day-Con-Tan-Gai-Full.docx.
-4. Neu chi can file dong goi: xem 00_ARCHIVES/.
+- Các bản cũ và ZIP được giữ lại để truy vết; không tự động xóa các bản có vẻ trùng lặp.
+- Tên gốc của từng gói được giữ bên trong thư mục phân loại để dễ đối chiếu nguồn.
+- Trước khi sử dụng, hãy đọc README, changelog và QA report bên trong gói tương ứng.
+- Không sửa `MASTER_CORE_V8_CUSTOM_GEM_INSTRUCTIONS` hoặc prompt runtime trong quá trình sắp xếp này. Thay đổi KB cần được kiểm tra riêng.
+- Nội dung giao tiếp hẹn hò cần tôn trọng sự đồng thuận, ranh giới và quyền tự quyết; tránh ép buộc, gây ghen, tạo mặc cảm hoặc thao túng cảm xúc.
 
-Quy uoc quan ly
----------------
-- Cac ban cu va ZIP duoc giu lai de truy vet; khong tu dong xoa ban trung lap.
-- Ten thu muc phan anh ten goi/nhan ban goc, de tranh lam mat nguon goc.
-- Truoc khi dua vao su dung, hay doc README va changelog ben trong tung goi.
-- MASTER_CORE_V8_CUSTOM_GEM_INSTRUCTIONS va prompt runtime khong duoc sua trong
-  qua trinh sap xep nay; thay doi KB can duoc kiem tra rieng.
-- Noi dung ve giao tiep hen ho can ton trong dong thuan, ranh gioi va quyen tu quyet;
-  khong su dung thu thuat ep buoc, gay ghen, tao mac cam hay thao tung cam xuc.
+## Lưu ý
 
-Luu y
-----
-Thu muc nay la kho luu tru nhieu the he phat trien, khong phai mot goi runtime
-duy nhat da duoc xac nhan. Hay kiem tra changelog/QA report cua tung phien ban
-truoc khi chon goi phu hop.
+Đây là kho lưu trữ nhiều thế hệ phát triển, không phải một gói runtime duy nhất đã được xác nhận. Hãy kiểm tra tài liệu của từng phiên bản trước khi chọn gói phù hợp.
