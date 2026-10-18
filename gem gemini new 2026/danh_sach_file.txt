@@ -1,0 +1,252 @@
+Folder PATH listing
+Volume serial number is 2C1C-2A7D
+C:.
+|   Bao-Cao-Bo-Day-Con-Tan-Gai-Full.docx
+|   danh_sach_file.txt
+|   MASTER_CORE_5_INVESTMENT_V6.zip
+|   MASTER_CORE_5_INVESTMENT_V6_REPAIRED.zip
+|   MASTER_CORE_5_INVESTMENT_V7_FLIRT_UPGRADE.zip
+|   MASTER_CORE_5_INVESTMENT_V7_REALTIME_UPGRADE.zip
+|   MASTER_CORE_5_INVESTMENT_V8_UPGRADE.zip
+|   MASTER_CORE_5_STAGE_V9_FINAL.zip
+|   MASTER_CORE_5_STAGE_V9_FINAL_v2.zip
+|   MASTER_CORE_5_STAGE_V9_FINAL_v3.zip
+|   MASTER_CORE_5_STAGE_V9_FINAL_v4.zip
+|   MASTER_CORE_5_STAGE_V9_FINAL_v5.zip
+|   V8_KB_V8_DOCX_SAFE_UPDATE.zip
+|   
++---MASTER_CORE_5_INVESTMENT_V6_REPAIRED
+|   |   MASTER_CORE_V6_CUSTOM_GEM_INSTRUCTIONS.txt
+|   |   
+|   \---MASTER_CORE_5_INVESTMENT_V6_REPAIRED
+|       |   README_V6.txt
+|       |   
+|       +---CORE
+|       |       ASSESS_CORE_V6.txt
+|       |       BUILD_CORE_V6.txt
+|       |       EXIT_CORE_V6.txt
+|       |       MAINTAIN_CORE_V6.txt
+|       |       REPAIR_CORE_V6.txt
+|       |       
+|       +---DOCS
+|       |       CHANGELOG_V6.md
+|       |       MIGRATION_GUIDE.md
+|       |       REPAIR_REPORT_V6.md
+|       |       
+|       +---KB_PDF
+|       |       ASSESS_KB_V6.pdf
+|       |       BUILD_KB_V6.pdf
+|       |       EXIT_KB_V6.pdf
+|       |       MAINTAIN_KB_V6.pdf
+|       |       REPAIR_KB_V6.pdf
+|       |       
+|       \---KB_SOURCE
+|               ASSESS_KB_V6_SOURCE.md
+|               BUILD_KB_V6_SOURCE.md
+|               EXIT_KB_V6_SOURCE.md
+|               MAINTAIN_KB_V6_SOURCE.md
+|               REPAIR_KB_V6_SOURCE.md
+|               
++---MASTER_CORE_5_INVESTMENT_V7_FLIRT_UPGRADE
+|   \---MASTER_CORE_5_INVESTMENT_V7_FLIRT_UPGRADE
+|       |   MASTER_CORE_V6_CUSTOM_GEM_INSTRUCTIONS.txt
+|       |   README_V6.txt
+|       |   UPGRADE_NOTES.md
+|       |   
+|       +---CORE
+|       |       ASSESS_CORE_V6.txt
+|       |       BUILD_CORE_V6.txt
+|       |       EXIT_CORE_V6.txt
+|       |       MAINTAIN_CORE_V6.txt
+|       |       REPAIR_CORE_V6.txt
+|       |       
+|       +---DOCS
+|       |       CHANGELOG_V6.md
+|       |       MIGRATION_GUIDE.md
+|       |       QA_REPORT_V7.md
+|       |       REPAIR_REPORT_V6.md
+|       |       
+|       +---KB_PDF
+|       |       ASSESS_KB_V6.pdf
+|       |       BUILD_KB_V6.pdf
+|       |       EXIT_KB_V6.pdf
+|       |       MAINTAIN_KB_V6.pdf
+|       |       REPAIR_KB_V6.pdf
+|       |       
+|       \---KB_SOURCE
+|               ASSESS_KB_V6_SOURCE.md
+|               BUILD_KB_V6_SOURCE.md
+|               EXIT_KB_V6_SOURCE.md
+|               MAINTAIN_KB_V6_SOURCE.md
+|               REPAIR_KB_V6_SOURCE.md
+|               
++---MASTER_CORE_5_INVESTMENT_V7_REALTIME_UPGRADE
+|   \---MASTER_CORE_5_INVESTMENT_V7_REALTIME_UPGRADE
+|       |   CONTENTS.txt
+|       |   FILES_MANIFEST.txt
+|       |   MASTER_CORE_V7_CUSTOM_GEM_INSTRUCTIONS.txt
+|       |   README_V7.txt
+|       |   
+|       +---CORE
+|       |       ASSESS_CORE_V7.txt
+|       |       BUILD_CORE_V7.txt
+|       |       EXIT_CORE_V7.txt
+|       |       MAINTAIN_CORE_V7.txt
+|       |       REPAIR_CORE_V7.txt
+|       |       
+|       +---DOCS
+|       |       CHANGELOG_V7.md
+|       |       MIGRATION_NOTES_V7.md
+|       |       QA_REPORT_V7.md
+|       |       TEST_CASES_V7.md
+|       |       
+|       +---KB_PDF
+|       |       ASSESS_KB_V7.pdf
+|       |       BUILD_KB_V7.pdf
+|       |       EXIT_KB_V7.pdf
+|       |       MAINTAIN_KB_V7.pdf
+|       |       REPAIR_KB_V7.pdf
+|       |       
+|       \---KB_SOURCE
+|               ASSESS_KB_V7_SOURCE.md
+|               BUILD_KB_V7_SOURCE.md
+|               EXIT_KB_V7_SOURCE.md
+|               MAINTAIN_KB_V7_SOURCE.md
+|               REPAIR_KB_V7_SOURCE.md
+|               
++---MASTER_CORE_5_INVESTMENT_V8_UPGRADE
+|   \---MASTER_CORE_5_INVESTMENT_V8_UPGRADE
+|       |   FILES_MANIFEST_V8.txt
+|       |   MASTER_CORE_V8_CUSTOM_GEM_INSTRUCTIONS.txt
+|       |   README_V8.txt
+|       |   
+|       +---CORE
+|       |       ASSESS_CORE_V8.txt
+|       |       BUILD_CORE_V8.txt
+|       |       EXIT_CORE_V8.txt
+|       |       MAINTAIN_CORE_V8.txt
+|       |       REPAIR_CORE_V8.txt
+|       |       
+|       +---DOCS
+|       |       CHANGELOG_V8.md
+|       |       FIX_V7_ERRORS.md
+|       |       MIGRATION_NOTES_V8.md
+|       |       QA_REPORT_V8.md
+|       |       TEST_CASES_V8.md
+|       |       
+|       +---KB_PDF
+|       |       ASSESS_KB_V8.pdf
+|       |       BUILD_KB_V8.pdf
+|       |       EXIT_KB_V8.pdf
+|       |       MAINTAIN_KB_V8.pdf
+|       |       REPAIR_KB_V8.pdf
+|       |       
+|       \---KB_SOURCE
+|               ASSESS_KB_V8_SOURCE.md
+|               BUILD_KB_V8_SOURCE.md
+|               EXIT_KB_V8_SOURCE.md
+|               MAINTAIN_KB_V8_SOURCE.md
+|               REPAIR_KB_V8_SOURCE.md
+|               
++---MASTER_CORE_5_STAGE_V9_FINAL
+|       ADDED_ONLY_CORE_V9.txt
+|       ADDED_ONLY_KB_V9.pdf
+|       DATING_CORE_V9.txt
+|       DATING_KB_V9.pdf
+|       EARLY_TALKING_CORE_V9.txt
+|       EARLY_TALKING_KB_V9.pdf
+|       MET_IN_PERSON_CORE_V9.txt
+|       MET_IN_PERSON_KB_V9.pdf
+|       STRANGER_CORE_V9.txt
+|       STRANGER_KB_V9.pdf
+|       
++---MASTER_CORE_5_STAGE_V9_FINAL_v2
+|       ADDED_ONLY_CORE_V9.txt
+|       ADDED_ONLY_KB_V9.pdf
+|       DATING_CORE_V9.txt
+|       DATING_KB_V9.pdf
+|       EARLY_TALKING_CORE_V9.txt
+|       EARLY_TALKING_KB_V9.pdf
+|       MET_IN_PERSON_CORE_V9.txt
+|       MET_IN_PERSON_KB_V9.pdf
+|       STRANGER_CORE_V9.txt
+|       STRANGER_KB_V9.pdf
+|       
++---MASTER_CORE_5_STAGE_V9_FINAL_v3
+|   \---MASTER_CORE_5_STAGE_V9_FINAL
+|           ADDED_ONLY_CORE_V9.txt
+|           ADDED_ONLY_KB_V9.pdf
+|           DATING_CORE_V9.txt
+|           DATING_KB_V9.pdf
+|           EARLY_TALKING_CORE_V9.txt
+|           EARLY_TALKING_KB_V9.pdf
+|           MET_IN_PERSON_CORE_V9.txt
+|           MET_IN_PERSON_KB_V9.pdf
+|           STRANGER_CORE_V9.txt
+|           STRANGER_KB_V9.pdf
+|           
++---MASTER_CORE_5_STAGE_V9_FINAL_v4
+|   |   CHANGELOG_v4.md
+|   |   
+|   \---MASTER_CORE_5_STAGE_V9_FINAL
+|           ADDED_ONLY_CORE_V9.txt
+|           ADDED_ONLY_KB_V9.pdf
+|           DATING_CORE_V9.txt
+|           DATING_KB_V9.pdf
+|           EARLY_TALKING_CORE_V9.txt
+|           EARLY_TALKING_KB_V9.pdf
+|           MET_IN_PERSON_CORE_V9.txt
+|           MET_IN_PERSON_KB_V9.pdf
+|           STRANGER_CORE_V9.txt
+|           STRANGER_KB_V9.pdf
+|           
++---MASTER_CORE_5_STAGE_V9_FINAL_v5
+|   \---MASTER_CORE_5_STAGE_V9_FINAL
+|           ADDED_ONLY_CORE_V9.txt
+|           ADDED_ONLY_KB_V9.pdf
+|           DATING_CORE_V9.txt
+|           DATING_KB_V9.pdf
+|           EARLY_TALKING_CORE_V9.txt
+|           EARLY_TALKING_KB_V9.pdf
+|           MET_IN_PERSON_CORE_V9.txt
+|           MET_IN_PERSON_KB_V9.pdf
+|           STRANGER_CORE_V9.txt
+|           STRANGER_KB_V9.pdf
+|           
++---MASTER_CORE_5_STAGE_V9_FINAL_V6
+|   \---MASTER_CORE_5_INVESTMENT_V6
+|       |   README_V6.txt
+|       |   
+|       +---CORE
+|       |       ASSESS_CORE_V6.txt
+|       |       BUILD_CORE_V6.txt
+|       |       EXIT_CORE_V6.txt
+|       |       MAINTAIN_CORE_V6.txt
+|       |       REPAIR_CORE_V6.txt
+|       |       
+|       +---DOCS
+|       |       CHANGELOG_V6.md
+|       |       MIGRATION_GUIDE.md
+|       |       
+|       +---KB_PDF
+|       |       ASSESS_KB_V6.pdf
+|       |       BUILD_KB_V6.pdf
+|       |       EXIT_KB_V6.pdf
+|       |       MAINTAIN_KB_V6.pdf
+|       |       REPAIR_KB_V6.pdf
+|       |       
+|       \---KB_SOURCE
+|               ASSESS_KB_V6_SOURCE.md
+|               BUILD_KB_V6_SOURCE.md
+|               EXIT_KB_V6_SOURCE.md
+|               MAINTAIN_KB_V6_SOURCE.md
+|               REPAIR_KB_V6_SOURCE.md
+|               
+\---V8_KB_V8_DOCX_SAFE_UPDATE
+        ASSESS_KB_V8.pdf
+        BUILD_KB_V8.pdf
+        DOCX_V8_SAFE_MAPPING_AND_KB_BLOCKS.md
+        EXIT_KB_V8.pdf
+        MAINTAIN_KB_V8.pdf
+        REPAIR_KB_V8.pdf
+        

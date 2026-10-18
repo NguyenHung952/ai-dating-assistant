@@ -1,0 +1,13 @@
+V7 FLIRT + REALTIME CONTEXT — PACKAGE CONTENTS
+
+MASTER_CORE_V7_CUSTOM_GEM_INSTRUCTIONS.txt
+README_V7.txt
+CORE/ (5 mode-specific overlays, [0]–[23])
+KB_SOURCE/ (5 editable Markdown KB sources, sections [A]–[V])
+KB_PDF/ (5 PDF exports regenerated from the V7 Markdown sources)
+DOCS/CHANGELOG_V7.md
+DOCS/MIGRATION_NOTES_V7.md
+DOCS/QA_REPORT_V7.md
+DOCS/TEST_CASES_V7.md (20 expected-behavior regression cases)
+
+Use the V7 sources only; V6 originals and render intermediates are intentionally excluded to avoid version confusion.
